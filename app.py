@@ -11,7 +11,7 @@ def get_transcript():
         return jsonify({'error': 'Video ID is required'}), 400
 
     try:
-        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
+        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'],proxies={"http": "http://116.203.28.43:80"})
         return jsonify({"transcript": transcript})
     except TranscriptsDisabled:
         return jsonify({'error': 'Transcripts are disabled for this video'}), 403
