@@ -1,3 +1,2 @@
-fastapi
-uvicorn
-youtube_transcript_api
+Flask
+youtube-transcript-api
